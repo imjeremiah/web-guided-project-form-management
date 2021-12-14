@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { render } from 'react-dom'
 // 👉 App contains a more sophisticated form we'll flesh out later
 import App from './components/App'
@@ -11,7 +11,28 @@ const petsList = [
 ]
 
 function SimpleForm() {
-  return <div>Ready to start GP!</div>
+  const [formValues, setFormValues] = useState({});
+  const [pets, setPets] = useState(petsList);
+
+  return (
+    <div>
+      <h1>Simple Form App</h1>
+      <form>
+        <input 
+          value={}
+          onChange={}
+          name="petName"
+          type="text"
+        />
+        <input 
+          value={}
+          onChange={}
+          name="petType"
+          type="text"
+        />
+      </form>
+    </div>
+  )
 }
 
 render(
